@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cc95dccf-56c0-4d57-8524-a19d71c6ef67" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26974/AuthWcfService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AuthWcfService.disco" MetadataType="Disco" ID="0976a139-197a-44a5-8c99-e667b16a1dd5" SourceId="1" SourceUrl="http://localhost:26974/AuthWcfService.svc?disco" />
+    <MetadataFile FileName="AuthWcfService.wsdl" MetadataType="Wsdl" ID="d74e8483-1eb3-49cb-8f41-627c806c21e6" SourceId="1" SourceUrl="http://localhost:26974/AuthWcfService.svc?wsdl" />
+    <MetadataFile FileName="AuthWcfService.xsd" MetadataType="Schema" ID="56ff340c-b28b-4932-9c18-6a898a1570bb" SourceId="1" SourceUrl="http://localhost:26974/AuthWcfService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AuthWcfService1.xsd" MetadataType="Schema" ID="0294e8f2-8e3b-4111-bdc3-e8d5c3006ead" SourceId="1" SourceUrl="http://localhost:26974/AuthWcfService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AuthWcfService2.xsd" MetadataType="Schema" ID="76be9897-18b8-4f52-abf9-d923e25738b0" SourceId="1" SourceUrl="http://localhost:26974/AuthWcfService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AuthWcfService3.xsd" MetadataType="Schema" ID="3a45487d-6338-452d-836d-c0db3c6d5e62" SourceId="1" SourceUrl="http://localhost:26974/AuthWcfService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,152 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Interfaces", "SSO.Interfaces\SSO.Interfaces.csproj", "{4ECBCF8D-C637-4E4D-B6F0-DBDD92D53667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Service.DataContext", "SSO.Service.DataContext\SSO.Service.DataContext.csproj", "{DBC91705-5FE4-47C0-8467-FCE90EF50AF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Log4Net", "SSO.Log4Net\SSO.Log4Net.csproj", "{5553EF55-A4CF-46ED-BDC6-E00AACD7E05B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.DataModel", "SSO.DataModel\SSO.DataModel.csproj", "{7671C02C-FB70-45DF-B6B0-F9564D6F86C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Common", "SSO.Common\SSO.Common.csproj", "{89CFEC05-4C84-4404-8661-AE8C47D683D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Service.Repositories", "SSO.Service.Repositories\SSO.Service.Repositories.csproj", "{A0771F7F-ED34-404D-9497-8CE3AAFFCFC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Service.Logic", "SSO.Service.Logic\SSO.Service.Logic.csproj", "{5FDB1C5E-AA85-4D75-8892-98DE6E564FFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Service.AutofacModule", "SSO.Service.AutofacModule\SSO.Service.AutofacModule.csproj", "{C640088B-869A-467E-B689-95C4F9F7C51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.WCFService", "SSO.WCFService\SSO.WCFService.csproj", "{9AA2AC58-165B-40D4-BC80-AB037F79248A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{EF3A4A29-9886-4B03-B99B-F31D3468AC24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.WebApp1", "SSO.WebApp1\SSO.WebApp1.csproj", "{F33A4587-4143-4504-9EC8-E0783AC206D9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9AA2AC58-165B-40D4-BC80-AB037F79248A} = {9AA2AC58-165B-40D4-BC80-AB037F79248A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Web.Logic", "SSO.Web.Logic\SSO.Web.Logic.csproj", "{8307D657-4DAA-46ED-AF8F-46393A5C654C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4B3FA140-DB15-4115-A900-0F34B4913FF2} = {4B3FA140-DB15-4115-A900-0F34B4913FF2}
+		{9AA2AC58-165B-40D4-BC80-AB037F79248A} = {9AA2AC58-165B-40D4-BC80-AB037F79248A}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{C9818701-F1B6-4670-AEDE-F0055E161FC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{06AD0FDA-8033-4BBA-8BEB-583BD6F9D1F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Test", "SSO.Test\SSO.Test.csproj", "{E67F0B9A-6961-4DB4-B69B-28963250CBD0}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SSO.WebService", "SSO.WebService\", "{4B3FA140-DB15-4115-A900-0F34B4913FF2}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.2"
+		ProjectReferences = "{89cfec05-4c84-4404-8661-ae8c47d683d9}|SSO.Common.dll;{4ECBCF8D-C637-4E4D-B6F0-DBDD92D53667}|SSO.Interfaces.dll;{7671C02C-FB70-45DF-B6B0-F9564D6F86C8}|SSO.DataModel.dll;{dbc91705-5fe4-47c0-8467-fce90ef50af1}|SSO.DataContext.dll;{5553ef55-a4cf-46ed-bdc6-e00aacd7e05b}|SSO.Log4Net.dll;{5fdb1c5e-aa85-4d75-8892-98de6e564ffe}|SSO.Logic.dll;{a0771f7f-ed34-404d-9497-8ce3aaffcfc5}|SSO.Repositories.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_7140"
+		Debug.AspNetCompiler.PhysicalPath = "SSO.WebService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7140\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_7140"
+		Release.AspNetCompiler.PhysicalPath = "SSO.WebService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7140\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "7140"
+		SlnRelativePath = "SSO.WebService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Web.App", "SSO.Web.App\SSO.Web.App.csproj", "{A5F23B41-968D-4C0C-9C79-2FD32DA83E0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4ECBCF8D-C637-4E4D-B6F0-DBDD92D53667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECBCF8D-C637-4E4D-B6F0-DBDD92D53667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECBCF8D-C637-4E4D-B6F0-DBDD92D53667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECBCF8D-C637-4E4D-B6F0-DBDD92D53667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBC91705-5FE4-47C0-8467-FCE90EF50AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC91705-5FE4-47C0-8467-FCE90EF50AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC91705-5FE4-47C0-8467-FCE90EF50AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC91705-5FE4-47C0-8467-FCE90EF50AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5553EF55-A4CF-46ED-BDC6-E00AACD7E05B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5553EF55-A4CF-46ED-BDC6-E00AACD7E05B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5553EF55-A4CF-46ED-BDC6-E00AACD7E05B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5553EF55-A4CF-46ED-BDC6-E00AACD7E05B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7671C02C-FB70-45DF-B6B0-F9564D6F86C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7671C02C-FB70-45DF-B6B0-F9564D6F86C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7671C02C-FB70-45DF-B6B0-F9564D6F86C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7671C02C-FB70-45DF-B6B0-F9564D6F86C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89CFEC05-4C84-4404-8661-AE8C47D683D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CFEC05-4C84-4404-8661-AE8C47D683D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CFEC05-4C84-4404-8661-AE8C47D683D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CFEC05-4C84-4404-8661-AE8C47D683D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0771F7F-ED34-404D-9497-8CE3AAFFCFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0771F7F-ED34-404D-9497-8CE3AAFFCFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0771F7F-ED34-404D-9497-8CE3AAFFCFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0771F7F-ED34-404D-9497-8CE3AAFFCFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FDB1C5E-AA85-4D75-8892-98DE6E564FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDB1C5E-AA85-4D75-8892-98DE6E564FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDB1C5E-AA85-4D75-8892-98DE6E564FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDB1C5E-AA85-4D75-8892-98DE6E564FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C640088B-869A-467E-B689-95C4F9F7C51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C640088B-869A-467E-B689-95C4F9F7C51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C640088B-869A-467E-B689-95C4F9F7C51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C640088B-869A-467E-B689-95C4F9F7C51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AA2AC58-165B-40D4-BC80-AB037F79248A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA2AC58-165B-40D4-BC80-AB037F79248A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA2AC58-165B-40D4-BC80-AB037F79248A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA2AC58-165B-40D4-BC80-AB037F79248A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33A4587-4143-4504-9EC8-E0783AC206D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33A4587-4143-4504-9EC8-E0783AC206D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33A4587-4143-4504-9EC8-E0783AC206D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33A4587-4143-4504-9EC8-E0783AC206D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8307D657-4DAA-46ED-AF8F-46393A5C654C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8307D657-4DAA-46ED-AF8F-46393A5C654C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8307D657-4DAA-46ED-AF8F-46393A5C654C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8307D657-4DAA-46ED-AF8F-46393A5C654C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E67F0B9A-6961-4DB4-B69B-28963250CBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E67F0B9A-6961-4DB4-B69B-28963250CBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E67F0B9A-6961-4DB4-B69B-28963250CBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E67F0B9A-6961-4DB4-B69B-28963250CBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B3FA140-DB15-4115-A900-0F34B4913FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B3FA140-DB15-4115-A900-0F34B4913FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B3FA140-DB15-4115-A900-0F34B4913FF2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B3FA140-DB15-4115-A900-0F34B4913FF2}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A5F23B41-968D-4C0C-9C79-2FD32DA83E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F23B41-968D-4C0C-9C79-2FD32DA83E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F23B41-968D-4C0C-9C79-2FD32DA83E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F23B41-968D-4C0C-9C79-2FD32DA83E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4ECBCF8D-C637-4E4D-B6F0-DBDD92D53667} = {06AD0FDA-8033-4BBA-8BEB-583BD6F9D1F4}
+		{DBC91705-5FE4-47C0-8467-FCE90EF50AF1} = {EF3A4A29-9886-4B03-B99B-F31D3468AC24}
+		{5553EF55-A4CF-46ED-BDC6-E00AACD7E05B} = {06AD0FDA-8033-4BBA-8BEB-583BD6F9D1F4}
+		{7671C02C-FB70-45DF-B6B0-F9564D6F86C8} = {06AD0FDA-8033-4BBA-8BEB-583BD6F9D1F4}
+		{89CFEC05-4C84-4404-8661-AE8C47D683D9} = {06AD0FDA-8033-4BBA-8BEB-583BD6F9D1F4}
+		{A0771F7F-ED34-404D-9497-8CE3AAFFCFC5} = {EF3A4A29-9886-4B03-B99B-F31D3468AC24}
+		{5FDB1C5E-AA85-4D75-8892-98DE6E564FFE} = {EF3A4A29-9886-4B03-B99B-F31D3468AC24}
+		{C640088B-869A-467E-B689-95C4F9F7C51C} = {EF3A4A29-9886-4B03-B99B-F31D3468AC24}
+		{9AA2AC58-165B-40D4-BC80-AB037F79248A} = {EF3A4A29-9886-4B03-B99B-F31D3468AC24}
+		{F33A4587-4143-4504-9EC8-E0783AC206D9} = {C9818701-F1B6-4670-AEDE-F0055E161FC5}
+		{8307D657-4DAA-46ED-AF8F-46393A5C654C} = {C9818701-F1B6-4670-AEDE-F0055E161FC5}
+		{4B3FA140-DB15-4115-A900-0F34B4913FF2} = {EF3A4A29-9886-4B03-B99B-F31D3468AC24}
+		{A5F23B41-968D-4C0C-9C79-2FD32DA83E0B} = {C9818701-F1B6-4670-AEDE-F0055E161FC5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D25ADDE1-74D0-49A6-A22D-DCB6B36FF1D7}
+	EndGlobalSection
+EndGlobal

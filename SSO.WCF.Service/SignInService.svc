@@ -1,0 +1,6 @@
+﻿<%@ ServiceHost
+    Language="C#"
+    Debug="true"
+    Service="SSO.WCF.Service.SignInService, SSO.WCF.Service"
+    Factory="Autofac.Integration.Wcf.AutofacWebServiceHostFactory, Autofac.Integration.Wcf"
+    CodeBehind="SignInService.svc.cs"%>

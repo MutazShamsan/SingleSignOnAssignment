@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost
+    Service="SSO.WCFService.AuthWcfService, SSO.WCFService"
+    Factory="Autofac.Integration.Wcf.AutofacServiceHostFactory, Autofac.Integration.Wcf" %>

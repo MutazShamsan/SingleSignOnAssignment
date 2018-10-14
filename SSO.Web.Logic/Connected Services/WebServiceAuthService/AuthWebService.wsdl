@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RegisterNewUserContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="composite" type="tns:RegistrationRequestModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RegistrationRequestModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ServiceRequestModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UserLevel" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceRequestModel" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RequestDateTime" type="tns:DateTimeOffset" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestIpAddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DateTimeOffset" />
+      <s:element name="RegisterNewUserContractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegisterNewUserContractResult" type="tns:RegistrationResposeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RegistrationResposeModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ServiceResponseModel" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceResponseModel" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoginContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="composite" type="tns:LoginRequsetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LoginRequsetModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ServiceRequestModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccessToken" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="LoginContractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginContractResult" type="tns:LoginResposeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LoginResposeModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ServiceResponseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsAuthorized" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccessToken" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UserLevel" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="FirstActiveTime" type="tns:DateTimeOffset" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastActiveTime" type="tns:DateTimeOffset" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="LogoutContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="composite" type="tns:LoginRequsetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoutContractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogoutContractResult" type="tns:LoginResposeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegisterNewUserContractSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterNewUserContract" />
+  </wsdl:message>
+  <wsdl:message name="RegisterNewUserContractSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterNewUserContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginContractSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginContract" />
+  </wsdl:message>
+  <wsdl:message name="LoginContractSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutContractSoapIn">
+    <wsdl:part name="parameters" element="tns:LogoutContract" />
+  </wsdl:message>
+  <wsdl:message name="LogoutContractSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AuthWebServiceSoap">
+    <wsdl:operation name="RegisterNewUserContract">
+      <wsdl:input message="tns:RegisterNewUserContractSoapIn" />
+      <wsdl:output message="tns:RegisterNewUserContractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginContract">
+      <wsdl:input message="tns:LoginContractSoapIn" />
+      <wsdl:output message="tns:LoginContractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogoutContract">
+      <wsdl:input message="tns:LogoutContractSoapIn" />
+      <wsdl:output message="tns:LogoutContractSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AuthWebServiceSoap" type="tns:AuthWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterNewUserContract">
+      <soap:operation soapAction="http://tempuri.org/RegisterNewUserContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginContract">
+      <soap:operation soapAction="http://tempuri.org/LoginContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoutContract">
+      <soap:operation soapAction="http://tempuri.org/LogoutContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuthWebServiceSoap12" type="tns:AuthWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterNewUserContract">
+      <soap12:operation soapAction="http://tempuri.org/RegisterNewUserContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginContract">
+      <soap12:operation soapAction="http://tempuri.org/LoginContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoutContract">
+      <soap12:operation soapAction="http://tempuri.org/LogoutContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthWebService">
+    <wsdl:port name="AuthWebServiceSoap" binding="tns:AuthWebServiceSoap">
+      <soap:address location="http://localhost:7140/AuthWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AuthWebServiceSoap12" binding="tns:AuthWebServiceSoap12">
+      <soap12:address location="http://localhost:7140/AuthWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
