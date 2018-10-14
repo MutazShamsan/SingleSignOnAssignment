@@ -27,16 +27,15 @@ public class AuthWebService : System.Web.Services.WebService
 
     public AuthWebService()
     {
-
-        //Uncomment the following line if using designed components 
-        //InitializeComponent(); 
-
         //Not implemention Ioc
+
+        //Capture the App location where the logger can find its configuration file
+        SSO.Common.StaticMembers.ApplicationDirectory = System.AppDomain.CurrentDomain.BaseDirectory;
+
         _dataContext = new AppDataContext(new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["AppDbConnection"].ConnectionString));
         _crypto = new Crypto();
         _cacheManagement = new MemoryCacheManagement();
         _appUserRepository = new AppUserRepository(_dataContext);
-        SSO.Common.StaticMembers.ApplicationDirectory = System.AppDomain.CurrentDomain.BaseDirectory;
         _logger = new Log4NetLogger();
         _registrationManagement = new RegistrationManagement(_appUserRepository, _logger, _crypto);
         _loginManagement = new LoginManagement(_appUserRepository, _logger, _crypto, _cacheManagement);

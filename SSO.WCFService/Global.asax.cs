@@ -11,6 +11,7 @@ namespace SSO.WCFService
         protected void Application_Start(object sender, EventArgs e)
         {
 
+            //Capture the App location where the logger can find its configuration file
             SSO.Common.StaticMembers.ApplicationDirectory = System.Web.HttpContext.Current.Server.MapPath(".");
 
             // WCF integration docs are at:

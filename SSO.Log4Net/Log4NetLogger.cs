@@ -11,11 +11,14 @@ namespace SSO.Log4Net
         private readonly log4net.ILog _log;
         private const string Long4NetConfigFileName = "log4net.config";
 
+        /// <summary>
+        /// Initialize the Log4Net logger
+        /// </summary>
         public Log4NetLogger()
         {
             var currentAssembly = System.Reflection.Assembly.GetExecutingAssembly();
             var repo = log4net.LogManager.GetRepository(currentAssembly);
-           // XmlConfigurator.Configure(repo, new FileInfo(Path.Combine(/*Path.GetDirectoryName(currentAssembly.Location)*/@"C:\Users\Mutaz\source\repos\SingleSignOnAssignment\SSO.WCF.Service\bin", Long4NetConfigFileName)));
+            // XmlConfigurator.Configure(repo, new FileInfo(Path.Combine(/*Path.GetDirectoryName(currentAssembly.Location)*/, Long4NetConfigFileName)));
             XmlConfigurator.Configure(repo, new FileInfo(Path.Combine(SSO.Common.StaticMembers.ApplicationDirectory, Long4NetConfigFileName)));
 
             _log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);

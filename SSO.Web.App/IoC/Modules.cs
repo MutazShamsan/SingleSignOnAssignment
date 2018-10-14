@@ -5,6 +5,9 @@ using SSO.Web.Logic;
 
 namespace SSO.Web.App.IoC
 {
+    /// <summary>
+    /// Define the modules to be register in the Autofac
+    /// </summary>
     public class LoggertModule : Module
     {
         protected override void Load(ContainerBuilder builder)
@@ -17,7 +20,7 @@ namespace SSO.Web.App.IoC
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.Register(x => new WebServiceAuthProvider(x.Resolve<ILogger>())).As<IAuthProvider>();
+            builder.Register(x => new WcfAuthProvider(x.Resolve<ILogger>())).As<IAuthProvider>();
         }
     }
 }

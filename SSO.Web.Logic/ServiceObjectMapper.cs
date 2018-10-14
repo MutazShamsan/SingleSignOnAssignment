@@ -2,6 +2,10 @@
 
 namespace SSO.Web.Logic
 {
+    /// <summary>
+    /// Create the mapper class that should only run once in the App lifecycle
+    /// 
+    /// </summary>
     public static class ServiceObjectMapper
     {
         public static void MapWebServiceObjects()
